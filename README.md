@@ -1,5 +1,9 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## Live at Firebase Hosting
+
+Open [https://taxcalculator20.web.app/](http://bit.ly/TaxCalculator20) to view it in the browser.
+
 ## Available Scripts
 
 In the project directory, you can run:
