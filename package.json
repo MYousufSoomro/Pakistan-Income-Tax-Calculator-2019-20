@@ -1,6 +1,6 @@
 {
-  "name": "tax-calc",
-  "version": "0.1.0",
+  "name": "tax-calculator-20",
+  "version": "1.0.0",
   "private": true,
   "dependencies": {
     "@material-ui/core": "^4.1.1",
