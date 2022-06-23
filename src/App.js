@@ -59,229 +59,122 @@ class App extends Component {
           )
         });
       } else if (income > 50000 && income <= 100000) {
-        let flag = income * 12 - 600000;
         this.setState({
           value: income,
           limit: false,
           Monthly_Income: this.currencyFormat(parseFloat(income).toFixed(2)),
           Monthly_Tax: this.currencyFormat(
-            parseFloat(((flag / 100) * 5) / 12).toFixed(2)
+            parseFloat((100) / 12).toFixed(2)
           ),
           Salary_After_Tax: this.currencyFormat(
-            parseFloat(income - ((flag / 100) * 5) / 12).toFixed(2)
+            parseFloat(income - (100) / 12).toFixed(2)
           ),
           Yearly_Income: this.currencyFormat(parseFloat(income * 12).toFixed(2)),
           Yearly_Tax: this.currencyFormat(
-            parseFloat((flag / 100) * 5).toFixed(2)
+            parseFloat(100).toFixed(2)
           ),
           Yearly_Income_After_Tax: this.currencyFormat(
-            parseFloat(income * 12 - (flag / 100) * 5).toFixed(2)
+            parseFloat(income * 12 - 100).toFixed(2)
           )
         });
-      } else if (income > 100000 && income <= 150000) {
+      } else if (income > 100000 && income <= 200000) {
         let flag = income * 12 - 1200000;
         this.setState({
           value: income,
           limit: false,
           Monthly_Income: this.currencyFormat(parseFloat(income).toFixed(2)),
           Monthly_Tax: this.currencyFormat(
-            parseFloat(((flag / 100) * 10) / 12 + 2500).toFixed(2)
+            parseFloat(((flag / 100) * 7) / 12).toFixed(2)
           ),
           Salary_After_Tax: this.currencyFormat(
-            parseFloat(income - (((flag / 100) * 10) / 12 + 2500)).toFixed(2)
+            parseFloat(income - (((flag / 100) * 7) / 12 )).toFixed(2)
           ),
           Yearly_Income: this.currencyFormat(parseFloat(income * 12).toFixed(2)),
           Yearly_Tax: this.currencyFormat(
-            parseFloat((flag / 100) * 10 + 30000).toFixed(2)
+            parseFloat((flag / 100) * 7).toFixed(2)
           ),
           Yearly_Income_After_Tax: this.currencyFormat(
-            parseFloat(income * 12 - (flag / 100) * 10 + 30000).toFixed(2)
+            parseFloat(income * 12 - (flag / 100) * 7).toFixed(2)
           )
         });
-      } else if (income > 150000 && income <= 208333.33) {
-        let flag = income * 12 - 1800000;
+      } else if (income > 200000 && income <= 300000) {
+        let flag = income * 12 - 2400000;
         this.setState({
           value: income,
           limit: false,
           Monthly_Income: this.currencyFormat(parseFloat(income).toFixed(2)),
           Monthly_Tax: this.currencyFormat(
-            parseFloat(((flag / 100) * 15) / 12 + 7500).toFixed(2)
+            parseFloat(((flag / 100) * 12.5) / 12 + 7000).toFixed(2)
           ),
           Salary_After_Tax: this.currencyFormat(
-            parseFloat(income - (((flag / 100) * 15) / 12 + 7500)).toFixed(2)
+            parseFloat(income - (((flag / 100) * 12.5) / 12 + 7000)).toFixed(2)
           ),
           Yearly_Income: this.currencyFormat(parseFloat(income * 12).toFixed(2)),
           Yearly_Tax: this.currencyFormat(
-            parseFloat((flag / 100) * 15 + 90000).toFixed(2)
+            parseFloat((flag / 100) * 12.5 + 84000).toFixed(2)
           ),
           Yearly_Income_After_Tax: this.currencyFormat(
-            parseFloat(income * 12 - ((flag / 100) * 15 + 90000)).toFixed(2)
+            parseFloat(income * 12 - ((flag / 100) * 12.5 + 84000)).toFixed(2)
           )
         });
-      } else if (income > 208333.33 && income <= 291666.67) {
-        let flag = income * 12 - 2500000;
+      } else if (income > 300000 && income <= 500000) {
+        let flag = income * 12 - 3600000;
         this.setState({
           value: income,
           limit: false,
           Monthly_Income: this.currencyFormat(parseFloat(income).toFixed(2)),
           Monthly_Tax: this.currencyFormat(
-            parseFloat(((flag / 100) * 17.5) / 12 + 16250).toFixed(2)
+            parseFloat(((flag / 100) * 17.5) / 12 + 19500).toFixed(2)
           ),
           Salary_After_Tax: this.currencyFormat(
-            parseFloat(income - (((flag / 100) * 17.5) / 12 + 16250)).toFixed(2)
+            parseFloat(income - (((flag / 100) * 17.5) / 12 + 19500)).toFixed(2)
           ),
           Yearly_Income: this.currencyFormat(parseFloat(income * 12).toFixed(2)),
           Yearly_Tax: this.currencyFormat(
-            parseFloat((flag / 100) * 17.5 + 195000).toFixed(2)
+            parseFloat((flag / 100) * 17.5 + 234000).toFixed(2)
           ),
           Yearly_Income_After_Tax: this.currencyFormat(
-            parseFloat(income * 12 - ((flag / 100) * 17.5 + 195000)).toFixed(2)
+            parseFloat(income * 12 - ((flag / 100) * 17.5 + 234000)).toFixed(2)
           )
         });
-      } else if (income > 291666.67 && income <= 416666.67) {
-        let flag = income * 12 - 3500000;
+      } else if (income > 500000 && income <= 1000000) {
+        let flag = income * 12 - 6000000;
         this.setState({
           value: income,
           limit: false,
           Monthly_Income: this.currencyFormat(parseFloat(income).toFixed(2)),
           Monthly_Tax: this.currencyFormat(
-            parseFloat(((flag / 100) * 20) / 12 + 30833.33).toFixed(2)
+            parseFloat(((flag / 100) * 22.5) / 12 + 54500).toFixed(2)
           ),
           Salary_After_Tax: this.currencyFormat(
-            parseFloat(income - (((flag / 100) * 20) / 12 + 30833.33)).toFixed(2)
+            parseFloat(income - (((flag / 100) * 22.5) / 12 + 54500)).toFixed(2)
           ),
           Yearly_Income: this.currencyFormat(parseFloat(income * 12).toFixed(2)),
           Yearly_Tax: this.currencyFormat(
-            parseFloat((flag / 100) * 20 + 370000).toFixed(2)
+            parseFloat((flag / 100) * 22.5 + 654000).toFixed(2)
           ),
           Yearly_Income_After_Tax: this.currencyFormat(
-            parseFloat(income * 12 - ((flag / 100) * 20 + 370000)).toFixed(2)
+            parseFloat(income * 12 - ((flag / 100) * 22.5 + 654000)).toFixed(2)
           )
         });
-      } else if (income > 416666.67 && income <= 666666.67) {
-        let flag = income * 12 - 5000000;
-        this.setState({
-          value: income,
-          limit: false,
-          Monthly_Income: this.currencyFormat(parseFloat(income).toFixed(2)),
-          Monthly_Tax: this.currencyFormat(
-            parseFloat(((flag / 100) * 22.5) / 12 + 55833.33).toFixed(2)
-          ),
-          Salary_After_Tax: this.currencyFormat(
-            parseFloat(income - (((flag / 100) * 22.5) / 12 + 55833.33)).toFixed(
-              2
-            )
-          ),
-          Yearly_Income: this.currencyFormat(parseFloat(income * 12).toFixed(2)),
-          Yearly_Tax: this.currencyFormat(
-            parseFloat((flag / 100) * 22.5 + 670000).toFixed(2)
-          ),
-          Yearly_Income_After_Tax: this.currencyFormat(
-            parseFloat(income * 12 - ((flag / 100) * 22.5 + 670000)).toFixed(2)
-          )
-        });
-      } else if (income > 666666.67 && income <= 1000000) {
-        let flag = income * 12 - 8000000;
-        this.setState({
-          value: income,
-          limit: false,
-          Monthly_Income: this.currencyFormat(parseFloat(income).toFixed(2)),
-          Monthly_Tax: this.currencyFormat(
-            parseFloat(((flag / 100) * 25) / 12 + 112083.33).toFixed(2)
-          ),
-          Salary_After_Tax: this.currencyFormat(
-            parseFloat(income - (((flag / 100) * 25) / 12 + 112083.33)).toFixed(2)
-          ),
-          Yearly_Income: this.currencyFormat(parseFloat(income * 12).toFixed(2)),
-          Yearly_Tax: this.currencyFormat(
-            parseFloat((flag / 100) * 25 + 1345000).toFixed(2)
-          ),
-          Yearly_Income_After_Tax: this.currencyFormat(
-            parseFloat(income * 12 - ((flag / 100) * 25 + 1345000)).toFixed(2)
-          )
-        });
-      } else if (income > 1000000 && income <= 2500000) {
+      } else if (income > 1000000 && income <= 50000000000) {
         let flag = income * 12 - 12000000;
         this.setState({
           value: income,
           limit: false,
           Monthly_Income: this.currencyFormat(parseFloat(income).toFixed(2)),
           Monthly_Tax: this.currencyFormat(
-            parseFloat(((flag / 100) * 27.5) / 12 + 195416.67).toFixed(2)
+            parseFloat(((flag / 100) * 32.5) / 12 + 167000).toFixed(2)
           ),
           Salary_After_Tax: this.currencyFormat(
-            parseFloat(income - (((flag / 100) * 27.5) / 12 + 195416.67)).toFixed(
-              2
-            )
+            parseFloat(income - (((flag / 100) * 32.5) / 12 + 167000)).toFixed(2)
           ),
           Yearly_Income: this.currencyFormat(parseFloat(income * 12).toFixed(2)),
           Yearly_Tax: this.currencyFormat(
-            parseFloat((flag / 100) * 27.5 + 2345000).toFixed(2)
+            parseFloat((flag / 100) * 32.5 + 2004000).toFixed(2)
           ),
           Yearly_Income_After_Tax: this.currencyFormat(
-            parseFloat(income * 12 - ((flag / 100) * 27.5 + 2345000)).toFixed(2)
-          )
-        });
-      } else if (income > 2500000 && income <= 4166666.67) {
-        let flag = income * 12 - 30000000;
-        this.setState({
-          value: income,
-          limit: false,
-          Monthly_Income: this.currencyFormat(parseFloat(income).toFixed(2)),
-          Monthly_Tax: this.currencyFormat(
-            parseFloat(((flag / 100) * 30) / 12 + 607916.67).toFixed(2)
-          ),
-          Salary_After_Tax: this.currencyFormat(
-            parseFloat(income - (((flag / 100) * 30) / 12 + 607916.67)).toFixed(2)
-          ),
-          Yearly_Income: this.currencyFormat(parseFloat(income * 12).toFixed(2)),
-          Yearly_Tax: this.currencyFormat(
-            parseFloat((flag / 100) * 30 + 7295000).toFixed(2)
-          ),
-          Yearly_Income_After_Tax: this.currencyFormat(
-            parseFloat(income * 12 - ((flag / 100) * 30 + 7295000)).toFixed(2)
-          )
-        });
-      } else if (income > 4166666.67 && income <= 6250000) {
-        let flag = income * 12 - 50000000;
-        this.setState({
-          value: income,
-          limit: false,
-          Monthly_Income: this.currencyFormat(parseFloat(income).toFixed(2)),
-          Monthly_Tax: this.currencyFormat(
-            parseFloat(((flag / 100) * 32.5) / 12 + 1107916.67).toFixed(2)
-          ),
-          Salary_After_Tax: this.currencyFormat(
-            parseFloat(
-              income - (((flag / 100) * 32.5) / 12 + 1107916.67)
-            ).toFixed(2)
-          ),
-          Yearly_Income: this.currencyFormat(parseFloat(income * 12).toFixed(2)),
-          Yearly_Tax: this.currencyFormat(
-            parseFloat((flag / 100) * 32.5 + 13295000).toFixed(2)
-          ),
-          Yearly_Income_After_Tax: this.currencyFormat(
-            parseFloat(income * 12 - ((flag / 100) * 32.5 + 13295000)).toFixed(2)
-          )
-        });
-      } else if (income > 6250000 && income <= 50000000000) {
-        let flag = income * 12 - 75000000;
-        this.setState({
-          value: income,
-          limit: false,
-          Monthly_Income: this.currencyFormat(parseFloat(income).toFixed(2)),
-          Monthly_Tax: this.currencyFormat(
-            parseFloat(((flag / 100) * 35) / 12 + 1785000).toFixed(2)
-          ),
-          Salary_After_Tax: this.currencyFormat(
-            parseFloat(income - (((flag / 100) * 35) / 12 + 1785000)).toFixed(2)
-          ),
-          Yearly_Income: this.currencyFormat(parseFloat(income * 12).toFixed(2)),
-          Yearly_Tax: this.currencyFormat(
-            parseFloat((flag / 100) * 35 + 21420000).toFixed(2)
-          ),
-          Yearly_Income_After_Tax: this.currencyFormat(
-            parseFloat(income * 12 - ((flag / 100) * 35 + 21420000)).toFixed(2)
+            parseFloat(income * 12 - ((flag / 100) * 32.5 + 2004000)).toFixed(2)
           )
         });
       } else if (income > 50000000000) {
@@ -348,15 +241,18 @@ class App extends Component {
           </Typography>
 
           <TextField
+           id="salaryInputBox"
             label="Monthly Salary "
-            type="text"
+            type="number"
             margin="normal"
             variant="outlined"
             value={this.state.value}
             fullWidth={true}
+            onInput = {(e) =>{
+              e.target.value = Math.max(0, parseInt(e.target.value) ).toString().slice(0,12)
+          }}
             inputProps={{
-              style: { fontSize: 30 },
-              maxLength: "12",
+              style: { fontSize: 30 }
             }}
             onChange={this.calcTax}
           />
@@ -392,7 +288,7 @@ class App extends Component {
                   <label>Monthly Income</label>
                 </div>
                 <div className="col-75">
-                  <input type="text" value={Monthly_Income} disabled />
+                  <input type="text" value={Monthly_Income} style={{ color: "white"}} disabled />
                 </div>
               </div>
               <div className="row">
@@ -403,7 +299,7 @@ class App extends Component {
                   <input
                     type="text"
                     value={Monthly_Tax}
-                    style={{ color: "red", fontWeight: "600" }}
+                    style={{ color: "white", fontWeight: "600", textShadow: "2px 0px red"}}
                     disabled
                   />
                 </div>
@@ -413,7 +309,7 @@ class App extends Component {
                   <label>Salary Take Home</label>
                 </div>
                 <div className="col-75">
-                  <input type="text" value={Salary_After_Tax} disabled />
+                  <input type="text" value={Salary_After_Tax} style={{ color: "white"}} disabled />
                 </div>
               </div>
               <div className="row">
@@ -421,7 +317,7 @@ class App extends Component {
                   <label>Yearly Income</label>
                 </div>
                 <div className="col-75">
-                  <input type="text" value={Yearly_Income} disabled />
+                  <input type="text" value={Yearly_Income} style={{ color: "white"}} disabled />
                 </div>
               </div>
               <div className="row">
@@ -432,7 +328,7 @@ class App extends Component {
                   <input
                     type="text"
                     value={Yearly_Tax}
-                    style={{ color: "red", fontWeight: "600" }}
+                    style={{ color: "white", fontWeight: "600", textShadow: "2px 0px red"}}
                     disabled
                   />
                 </div>
@@ -442,7 +338,7 @@ class App extends Component {
                   <label>Yearly Income After Tax</label>
                 </div>
                 <div className="col-75">
-                  <input type="text" value={Yearly_Income_After_Tax} disabled />
+                  <input type="text" value={Yearly_Income_After_Tax} style={{ color: "white"}} disabled />
                 </div>
               </div>
             </div>
