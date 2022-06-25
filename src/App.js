@@ -45,7 +45,7 @@ class App extends Component {
       flag = true;
     }
     if (flag) {
-      if (income > 0 && income <= 50000) {
+      if (income > 0 && income <= (600000 / 12)) {
         this.setState({
           value: income,
           limit: false,
@@ -58,23 +58,24 @@ class App extends Component {
             parseFloat(income * 12).toFixed(2)
           )
         });
-      } else if (income > 50000 && income <= 100000) {
+      } else if (income > (600000 / 12) && income <= (1200000 / 12)) {
+        let flag = income * 12 - 600000;
         this.setState({
           value: income,
           limit: false,
           Monthly_Income: this.currencyFormat(parseFloat(income).toFixed(2)),
           Monthly_Tax: this.currencyFormat(
-            parseFloat((100) / 12).toFixed(2)
+            parseFloat(((flag / 100) * 2.5) / 12).toFixed(2)
           ),
           Salary_After_Tax: this.currencyFormat(
-            parseFloat(income - (100) / 12).toFixed(2)
+            parseFloat(income - (((flag / 100) * 2.5) / 12)).toFixed(2)
           ),
           Yearly_Income: this.currencyFormat(parseFloat(income * 12).toFixed(2)),
           Yearly_Tax: this.currencyFormat(
-            parseFloat(100).toFixed(2)
+            parseFloat((flag / 100) * 2.5).toFixed(2)
           ),
           Yearly_Income_After_Tax: this.currencyFormat(
-            parseFloat(income * 12 - 100).toFixed(2)
+            parseFloat(income * 12 - (flag / 100) * 2.5).toFixed(2)
           )
         });
       } else if (income > 100000 && income <= 200000) {
@@ -84,17 +85,17 @@ class App extends Component {
           limit: false,
           Monthly_Income: this.currencyFormat(parseFloat(income).toFixed(2)),
           Monthly_Tax: this.currencyFormat(
-            parseFloat(((flag / 100) * 7) / 12).toFixed(2)
+            parseFloat(((flag / 100) * 12.5) / 12 + 1250).toFixed(2)
           ),
           Salary_After_Tax: this.currencyFormat(
-            parseFloat(income - (((flag / 100) * 7) / 12 )).toFixed(2)
+            parseFloat(income - (((flag / 100) * 12.5) / 12 + 1250)).toFixed(2)
           ),
           Yearly_Income: this.currencyFormat(parseFloat(income * 12).toFixed(2)),
           Yearly_Tax: this.currencyFormat(
-            parseFloat((flag / 100) * 7).toFixed(2)
+            parseFloat((flag / 100) * 12.5 + 15000).toFixed(2)
           ),
           Yearly_Income_After_Tax: this.currencyFormat(
-            parseFloat(income * 12 - (flag / 100) * 7).toFixed(2)
+            parseFloat(income * 12 - ((flag / 100) * 12.5 + 15000)).toFixed(2)
           )
         });
       } else if (income > 200000 && income <= 300000) {
@@ -104,17 +105,17 @@ class App extends Component {
           limit: false,
           Monthly_Income: this.currencyFormat(parseFloat(income).toFixed(2)),
           Monthly_Tax: this.currencyFormat(
-            parseFloat(((flag / 100) * 12.5) / 12 + 7000).toFixed(2)
+            parseFloat(((flag / 100) * 20) / 12 + 13750).toFixed(2)
           ),
           Salary_After_Tax: this.currencyFormat(
-            parseFloat(income - (((flag / 100) * 12.5) / 12 + 7000)).toFixed(2)
+            parseFloat(income - (((flag / 100) * 20) / 12 + 13750)).toFixed(2)
           ),
           Yearly_Income: this.currencyFormat(parseFloat(income * 12).toFixed(2)),
           Yearly_Tax: this.currencyFormat(
-            parseFloat((flag / 100) * 12.5 + 84000).toFixed(2)
+            parseFloat((flag / 100) * 20 + 165000).toFixed(2)
           ),
           Yearly_Income_After_Tax: this.currencyFormat(
-            parseFloat(income * 12 - ((flag / 100) * 12.5 + 84000)).toFixed(2)
+            parseFloat(income * 12 - ((flag / 100) * 20 + 165000)).toFixed(2)
           )
         });
       } else if (income > 300000 && income <= 500000) {
@@ -124,17 +125,17 @@ class App extends Component {
           limit: false,
           Monthly_Income: this.currencyFormat(parseFloat(income).toFixed(2)),
           Monthly_Tax: this.currencyFormat(
-            parseFloat(((flag / 100) * 17.5) / 12 + 19500).toFixed(2)
+            parseFloat(((flag / 100) * 25) / 12 + 33750).toFixed(2)
           ),
           Salary_After_Tax: this.currencyFormat(
-            parseFloat(income - (((flag / 100) * 17.5) / 12 + 19500)).toFixed(2)
+            parseFloat(income - (((flag / 100) * 25) / 12 + 33750)).toFixed(2)
           ),
           Yearly_Income: this.currencyFormat(parseFloat(income * 12).toFixed(2)),
           Yearly_Tax: this.currencyFormat(
-            parseFloat((flag / 100) * 17.5 + 234000).toFixed(2)
+            parseFloat((flag / 100) * 25 + 405000).toFixed(2)
           ),
           Yearly_Income_After_Tax: this.currencyFormat(
-            parseFloat(income * 12 - ((flag / 100) * 17.5 + 234000)).toFixed(2)
+            parseFloat(income * 12 - ((flag / 100) * 25 + 405000)).toFixed(2)
           )
         });
       } else if (income > 500000 && income <= 1000000) {
@@ -144,17 +145,17 @@ class App extends Component {
           limit: false,
           Monthly_Income: this.currencyFormat(parseFloat(income).toFixed(2)),
           Monthly_Tax: this.currencyFormat(
-            parseFloat(((flag / 100) * 22.5) / 12 + 54500).toFixed(2)
+            parseFloat(((flag / 100) * 32.5) / 12 + 83750).toFixed(2)
           ),
           Salary_After_Tax: this.currencyFormat(
-            parseFloat(income - (((flag / 100) * 22.5) / 12 + 54500)).toFixed(2)
+            parseFloat(income - (((flag / 100) * 32.5) / 12 + 83750)).toFixed(2)
           ),
           Yearly_Income: this.currencyFormat(parseFloat(income * 12).toFixed(2)),
           Yearly_Tax: this.currencyFormat(
-            parseFloat((flag / 100) * 22.5 + 654000).toFixed(2)
+            parseFloat((flag / 100) * 32.5 + 1005000).toFixed(2)
           ),
           Yearly_Income_After_Tax: this.currencyFormat(
-            parseFloat(income * 12 - ((flag / 100) * 22.5 + 654000)).toFixed(2)
+            parseFloat(income * 12 - ((flag / 100) * 32.5 + 1005000)).toFixed(2)
           )
         });
       } else if (income > 1000000 && income <= 50000000000) {
@@ -164,17 +165,17 @@ class App extends Component {
           limit: false,
           Monthly_Income: this.currencyFormat(parseFloat(income).toFixed(2)),
           Monthly_Tax: this.currencyFormat(
-            parseFloat(((flag / 100) * 32.5) / 12 + 167000).toFixed(2)
+            parseFloat(((flag / 100) * 35) / 12 + 246250).toFixed(2)
           ),
           Salary_After_Tax: this.currencyFormat(
-            parseFloat(income - (((flag / 100) * 32.5) / 12 + 167000)).toFixed(2)
+            parseFloat(income - (((flag / 100) * 35) / 12 + 246250)).toFixed(2)
           ),
           Yearly_Income: this.currencyFormat(parseFloat(income * 12).toFixed(2)),
           Yearly_Tax: this.currencyFormat(
-            parseFloat((flag / 100) * 32.5 + 2004000).toFixed(2)
+            parseFloat((flag / 100) * 35 + 2955000).toFixed(2)
           ),
           Yearly_Income_After_Tax: this.currencyFormat(
-            parseFloat(income * 12 - ((flag / 100) * 32.5 + 2004000)).toFixed(2)
+            parseFloat(income * 12 - ((flag / 100) * 35 + 2955000)).toFixed(2)
           )
         });
       } else if (income > 50000000000) {
@@ -241,16 +242,16 @@ class App extends Component {
           </Typography>
 
           <TextField
-           id="salaryInputBox"
+            id="salaryInputBox"
             label="Monthly Salary "
             type="number"
             margin="normal"
             variant="outlined"
             value={this.state.value}
             fullWidth={true}
-            onInput = {(e) =>{
-              e.target.value = Math.max(0, parseInt(e.target.value) ).toString().slice(0,12)
-          }}
+            onInput={(e) => {
+              e.target.value = Math.max(0, parseInt(e.target.value)).toString().slice(0, 12)
+            }}
             inputProps={{
               style: { fontSize: 30 }
             }}
@@ -288,7 +289,7 @@ class App extends Component {
                   <label>Monthly Income</label>
                 </div>
                 <div className="col-75">
-                  <input type="text" value={Monthly_Income} style={{ color: "white"}} disabled />
+                  <input type="text" value={Monthly_Income} style={{ color: "white" }} disabled />
                 </div>
               </div>
               <div className="row">
@@ -299,7 +300,7 @@ class App extends Component {
                   <input
                     type="text"
                     value={Monthly_Tax}
-                    style={{ color: "white", fontWeight: "600", textShadow: "2px 0px red"}}
+                    style={{ color: "white", fontWeight: "600", textShadow: "2px 0px red" }}
                     disabled
                   />
                 </div>
@@ -309,7 +310,7 @@ class App extends Component {
                   <label>Salary Take Home</label>
                 </div>
                 <div className="col-75">
-                  <input type="text" value={Salary_After_Tax} style={{ color: "white"}} disabled />
+                  <input type="text" value={Salary_After_Tax} style={{ color: "white" }} disabled />
                 </div>
               </div>
               <div className="row">
@@ -317,7 +318,7 @@ class App extends Component {
                   <label>Yearly Income</label>
                 </div>
                 <div className="col-75">
-                  <input type="text" value={Yearly_Income} style={{ color: "white"}} disabled />
+                  <input type="text" value={Yearly_Income} style={{ color: "white" }} disabled />
                 </div>
               </div>
               <div className="row">
@@ -328,7 +329,7 @@ class App extends Component {
                   <input
                     type="text"
                     value={Yearly_Tax}
-                    style={{ color: "white", fontWeight: "600", textShadow: "2px 0px red"}}
+                    style={{ color: "white", fontWeight: "600", textShadow: "2px 0px red" }}
                     disabled
                   />
                 </div>
@@ -338,14 +339,14 @@ class App extends Component {
                   <label>Yearly Income After Tax</label>
                 </div>
                 <div className="col-75">
-                  <input type="text" value={Yearly_Income_After_Tax} style={{ color: "white"}} disabled />
+                  <input type="text" value={Yearly_Income_After_Tax} style={{ color: "white" }} disabled />
                 </div>
               </div>
             </div>
           </div>
         )}
-  <br />
-      
+        <br />
+
         {!taxSlabStatus && (
           <div align="center"><Fab
             color="primary"
@@ -358,7 +359,7 @@ class App extends Component {
           >
             <VisibilityIcon style={{ marginRight: "0" }} />
             ­Show Income Tax Slabs
-            </Fab></div>
+          </Fab></div>
         )}
         <br />
         {taxSlabStatus && (
@@ -375,7 +376,7 @@ class App extends Component {
             >
               <VisibilityOffIcon style={{ marginRight: "0" }} />
               ­Hide Income Tax Slabs
-              </Fab></div>
+            </Fab></div>
           </Container>
         )}
         <br />

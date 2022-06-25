@@ -29,7 +29,7 @@ class TaxSlabs extends Component {
                     <li><Typography variant="body1">Where the taxable salary income exceeds Rs. 75,000,000 the rate of income tax is Rs. 21,420,000 + 35% of the amount exceeding Rs. 75,000,000.</Typography></li>
                 </ol> */}
 
-                <Typography variant="subtitle1">As per Federal Budget 2022-2023 presented by Government of Pakistan, following slabs and income tax rates will be applicable for salaried persons for the year 2022-2023:</Typography>
+                {/* <Typography variant="subtitle1">As per Federal Budget 2022-2023 presented by Government of Pakistan, following slabs and income tax rates will be applicable for salaried persons for the year 2022-2023:</Typography>
                 <ol>
                     <li><Typography variant="body1">Where the taxable salary income does not exceed Rs. 600,000 the rate of income tax is 0%.</Typography></li>
                     <li><Typography variant="body1">Where the taxable salary income exceeds Rs. 600,000 but does not exceed Rs. 1,200,000 the rate of income tax is Rs. 100.</Typography></li>
@@ -38,7 +38,20 @@ class TaxSlabs extends Component {
                     <li><Typography variant="body1">Where the taxable salary income exceeds Rs. 3,600,000 but does not exceed Rs. 6,000,000 the rate of income tax is Rs. 234,000 + 17.5% of the amount exceeding Rs. 3,600,000.</Typography></li>
                     <li><Typography variant="body1">Where the taxable salary income exceeds Rs. 6,000,000 but does not exceed Rs. 12,000,000 the rate of income tax is Rs. 654,000 + 22.5% of the amount exceeding Rs. 6,000,000.</Typography></li>
                     <li><Typography variant="body1">Where the taxable salary income exceeds Rs. 12,000,000 the rate of income tax is Rs. 2,004,000 + 32.5% of the amount exceeding Rs. 12,000,000.</Typography></li>
+                </ol> */}
+
+
+                <Typography variant="subtitle1">As per Federal Budget 2022-2023 presented by Government of Pakistan, following slabs and income tax rates will be applicable for salaried persons for the year 2022-2023:</Typography>
+                <ol>
+                    <li><Typography variant="body1">Where the taxable salary income does not exceed Rs. 600,000 the rate of income tax is ZERO (0%).</Typography></li>
+                    <li><Typography variant="body1">Where the taxable salary income exceeds Rs. 600,000 but does not exceed Rs. 1,200,000 the rate of income tax is 2.5% of the amount exceeding Rs. 600,000.</Typography></li>
+                    <li><Typography variant="body1">Where the taxable salary income exceeds Rs. 1,200,000 but does not exceed Rs. 2,400,000 the rate of income tax is Rs. 15,000 + 12.5% of the amount exceeding Rs. 1,200,000.</Typography></li>
+                    <li><Typography variant="body1">Where the taxable salary income exceeds Rs. 2,400,000 but does not exceed Rs. 3,600,000 the rate of income tax is Rs. 165,000 + 20% of the amount exceeding Rs. 2,400,000.</Typography></li>
+                    <li><Typography variant="body1">Where the taxable salary income exceeds Rs. 3,600,000 but does not exceed Rs. 6,000,000 the rate of income tax is Rs. 405,000 + 25% of the amount exceeding Rs. 3,600,000.</Typography></li>
+                    <li><Typography variant="body1">Where the taxable salary income exceeds Rs. 6,000,000 but does not exceed Rs. 12,000,000 the rate of income tax is Rs. 1,005,000 + 32.5% of the amount exceeding Rs. 6,000,000.</Typography></li>
+                    <li><Typography variant="body1">Where the taxable salary income exceeds Rs. 12,000,000 the rate of income tax is Rs. 2,955,000 + 35% of the amount exceeding Rs. 12,000,000.</Typography></li>
                 </ol>
+
             </div>
         )
     }
